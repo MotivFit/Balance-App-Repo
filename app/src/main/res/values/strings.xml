@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">UFit</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string-array name="tabs">
+        <item>Cardiovascular Endurance</item>
+        <item>Muscular Endurance</item>
+        <item>Muscular Strength</item>
+        <item>Flexibility</item>
+    </string-array>
+
+    <string-array name="exercise">
+        <item>Treadmill</item>
+        <item>Rowing Machine</item>
+        <item>Pushups</item>
+        <item>Cardio Bike</item>
+        <item>Chin-ups</item>
+        <item>Step Machine</item>
+        <item>Skipping Rope</item>
+        <item>Trisep Dips</item>
+    </string-array>
+</resources>
