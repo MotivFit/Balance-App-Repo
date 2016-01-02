@@ -1,2 +1,2 @@
-# uFit
-uFit is a Health App (Under Development)
+# Balance
+Balance is a Health App (Under Development)
