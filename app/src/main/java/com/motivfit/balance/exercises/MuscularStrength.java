@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.motivfit.R;
+import com.motivfit.balance.R;
 
 /**
  * Created by Home on 02-Nov-15.

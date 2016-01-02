@@ -12,7 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.motivfit.R;
+import com.motivfit.balance.R;
 import com.motivfit.balance.exercises.CardiovascularEndurance;
 import com.motivfit.balance.exercises.Flexibility;
 import com.motivfit.balance.exercises.MuscularEndurance;

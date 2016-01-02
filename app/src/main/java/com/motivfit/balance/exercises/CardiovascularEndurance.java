@@ -13,10 +13,10 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.motivfit.R;
 import com.motivfit.balance.Exercise;
 import com.motivfit.balance.ExerciseDetailActivity;
 import com.motivfit.balance.Preferences;
+import com.motivfit.balance.R;
 
 import java.util.ArrayList;
 import java.util.List;
