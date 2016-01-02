@@ -1,4 +1,4 @@
-package com.ufit.exercises;
+package com.motivfit.balance.exercises;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,17 +7,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.ufit.R;
+import com.motivfit.R;
 
 /**
  * Created by Home on 02-Nov-15.
  */
-public class Flexibility extends Fragment {
+public class MuscularStrength extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup v = (ViewGroup) inflater.inflate(R.layout.fragment_flexibility,container,false);
+        ViewGroup v = (ViewGroup) inflater.inflate(R.layout.fragment_muscular_strength, container, false);
 
         return v;
     }

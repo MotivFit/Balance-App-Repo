@@ -1,4 +1,8 @@
-package com.ufit;
+/*
+ * Copyright (c) Andrew Quebe 2016 .
+ */
+
+package com.motivfit.balance;
 
 /**
  * Created by Home on 02-Nov-15.
@@ -9,7 +13,7 @@ public class Exercise {
     private int color_id;
     private String title;
 
-    public Exercise(String title,int color_id, int id){
+    public Exercise(String title, int color_id, int id) {
         this.title = title;
         this.color_id = color_id;
         this.id = id;

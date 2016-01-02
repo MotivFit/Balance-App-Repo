@@ -1,4 +1,8 @@
-package com.ufit;
+/*
+ * Copyright (c) Andrew Quebe 2016 .
+ */
+
+package com.motivfit.balance;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -46,10 +50,9 @@ public class ExerciseDetailActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if(getFragmentManager().getBackStackEntryCount() == 0) {
+        if (getFragmentManager().getBackStackEntryCount() == 0) {
             super.onBackPressed();
-        }
-        else {
+        } else {
             getFragmentManager().popBackStack();
         }
     }

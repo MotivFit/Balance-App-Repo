@@ -1,4 +1,8 @@
-package com.ufit;
+/*
+ * Copyright (c) Andrew Quebe 2016 .
+ */
+
+package com.motivfit.balance;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -12,8 +16,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.ufit.fragment.ExerciseFragment;
-import com.ufit.fragment.HomeFragment;
+import com.motivfit.balance.fragment.ExerciseFragment;
+import com.motivfit.balance.fragment.HomeFragment;
 
 
 public class MainActivity extends AppCompatActivity
@@ -29,12 +33,11 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
 
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             toolbar.setElevation(R.dimen.toolbar_elevation);
         }
 
@@ -48,13 +51,13 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(id);
 
-        if(id==R.id.nav_home) {
+        if (id == R.id.nav_home) {
             HomeFragment home = new HomeFragment();
             ft.replace(R.id.container, home);
             ft.setTransition(android.support.v4.app.FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
             ft.addToBackStack(null);
             ft.commit();
-        }else if (id == R.id.nav_exercise) {
+        } else if (id == R.id.nav_exercise) {
             ExerciseFragment exercise = new ExerciseFragment();
             ft.replace(R.id.container, exercise);
             ft.setTransition(android.support.v4.app.FragmentTransaction.TRANSIT_FRAGMENT_OPEN);

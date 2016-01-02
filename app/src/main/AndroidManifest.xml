@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.ufit" >
+    package="com.motivfit.balance">
 
     <application
         android:allowBackup="true"
@@ -20,12 +19,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ExerciseDetailActivity"
-            android:parentActivityName=".MainActivity"
-            tools:targetApi="jelly_bean">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
+        <activity
+            android:name=".ExerciseDetailActivity"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

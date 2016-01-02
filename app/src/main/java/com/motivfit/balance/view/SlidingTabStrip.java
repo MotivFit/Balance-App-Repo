@@ -1,4 +1,4 @@
-package com.ufit.view;
+package com.motivfit.balance.view;
 
 import android.R;
 import android.content.Context;

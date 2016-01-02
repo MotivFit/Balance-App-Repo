@@ -1,4 +1,4 @@
-package com.ufit;
+package com.motivfit;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -1,4 +1,4 @@
-package com.ufit.fragment;
+package com.motivfit.balance.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.ufit.R;
+import com.motivfit.R;
 
 /**
  * Created by Home on 29-Oct-15.
@@ -19,10 +19,10 @@ public class HomeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup v = (ViewGroup) inflater.inflate(R.layout.fragment_home,container,false);
+        ViewGroup v = (ViewGroup) inflater.inflate(R.layout.fragment_home, container, false);
 
         ActionBar ab = ((AppCompatActivity) getActivity()).getSupportActionBar();
-        if(ab!=null){
+        if (ab != null) {
             ab.setTitle("Home");
         }
 

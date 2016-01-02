@@ -1,4 +1,8 @@
-package com.ufit;
+/*
+ * Copyright (c) Andrew Quebe 2016 .
+ */
+
+package com.motivfit.balance;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -24,7 +28,7 @@ public class Preferences {
         return getSharedPreferences().getBoolean(FIRSTRUN, true);
     }
 
-    public boolean firstRunOver(){
+    public boolean firstRunOver() {
         getSharedPreferences().edit().putBoolean(FIRSTRUN, false);
         return getSharedPreferences().getBoolean(FIRSTRUN, false);
     }

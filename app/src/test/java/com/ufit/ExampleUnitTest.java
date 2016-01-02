@@ -1,4 +1,4 @@
-package com.ufit;
+package com.motivfit;
 
 import org.junit.Test;
 

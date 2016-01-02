@@ -1,4 +1,4 @@
-package com.ufit.exercises;
+package com.motivfit.balance.exercises;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,10 +13,10 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ufit.Exercise;
-import com.ufit.ExerciseDetailActivity;
-import com.ufit.Preferences;
-import com.ufit.R;
+import com.motivfit.R;
+import com.motivfit.balance.Exercise;
+import com.motivfit.balance.ExerciseDetailActivity;
+import com.motivfit.balance.Preferences;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,7 +48,7 @@ public class CardiovascularEndurance extends Fragment {
             }
         });
 
-        if(first_run==false){
+        if (first_run == false) {
             v.removeView(cinfo);
         }
 
@@ -65,11 +65,11 @@ public class CardiovascularEndurance extends Fragment {
 
     }
 
-    public void populateExerciseList(){
-        exe.add(new Exercise("Trisep Dips",android.R.color.holo_blue_light, R.drawable.ic_jog));
-        exe.add(new Exercise("Treadmill",android.R.color.holo_red_light, R.drawable.ic_jog));
-        exe.add(new Exercise("Rowing Machine",android.R.color.holo_purple, R.drawable.ic_jog));
-        exe.add(new Exercise("Pushups",android.R.color.holo_green_light, R.drawable.ic_jog));
+    public void populateExerciseList() {
+        exe.add(new Exercise("Trisep Dips", android.R.color.holo_blue_light, R.drawable.ic_jog));
+        exe.add(new Exercise("Treadmill", android.R.color.holo_red_light, R.drawable.ic_jog));
+        exe.add(new Exercise("Rowing Machine", android.R.color.holo_purple, R.drawable.ic_jog));
+        exe.add(new Exercise("Pushups", android.R.color.holo_green_light, R.drawable.ic_jog));
         exe.add(new Exercise("Cardio Bike", android.R.color.holo_orange_light, R.drawable.ic_jog));
         exe.add(new Exercise("Chin-ups", android.R.color.holo_red_dark, R.drawable.ic_jog));
         exe.add(new Exercise("Step Machine", android.R.color.holo_blue_dark, R.drawable.ic_jog));
@@ -77,18 +77,18 @@ public class CardiovascularEndurance extends Fragment {
 
     }
 
-    public class ExerciseAdapter extends ArrayAdapter<Exercise>{
+    public class ExerciseAdapter extends ArrayAdapter<Exercise> {
 
 
-        public ExerciseAdapter(){
+        public ExerciseAdapter() {
             super(getActivity(), R.layout.grid_content, exe);
         }
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
 
-            if(convertView==null){
-                convertView = getActivity().getLayoutInflater().inflate(R.layout.grid_content,parent,false);
+            if (convertView == null) {
+                convertView = getActivity().getLayoutInflater().inflate(R.layout.grid_content, parent, false);
             }
 
             final Exercise cexe = exe.get(position);
