@@ -2,7 +2,7 @@
  * Copyright (c) Andrew Quebe 2016 .
  */
 
-package com.motivfit.balance;
+package com.motivfit.balance.ui.activity;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -16,8 +16,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.motivfit.balance.fragment.ExerciseFragment;
-import com.motivfit.balance.fragment.HomeFragment;
+import com.motivfit.balance.R;
+import com.motivfit.balance.ui.fragment.ExerciseFragment;
+import com.motivfit.balance.ui.fragment.HomeFragment;
 
 
 public class MainActivity extends AppCompatActivity

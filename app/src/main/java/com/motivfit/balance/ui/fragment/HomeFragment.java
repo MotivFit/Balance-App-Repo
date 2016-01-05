@@ -1,4 +1,4 @@
-package com.motivfit.balance.fragment;
+package com.motivfit.balance.ui.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
