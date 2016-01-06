@@ -2,7 +2,7 @@
  * Copyright (c) Andrew Quebe 2016 .
  */
 
-package com.motivfit.balance;
+package com.motivfit.balance.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.motivfit.balance.R;
 
 /**
  * Created by Danish Shah on 29-Oct-15.

@@ -13,10 +13,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.motivfit.balance.R;
-import com.motivfit.balance.exercises.CardiovascularEndurance;
-import com.motivfit.balance.exercises.Flexibility;
-import com.motivfit.balance.exercises.MuscularEndurance;
-import com.motivfit.balance.exercises.MuscularStrength;
+import com.motivfit.balance.ui.exercises.CardiovascularEndurance;
+import com.motivfit.balance.ui.exercises.Flexibility;
+import com.motivfit.balance.ui.exercises.MuscularEndurance;
+import com.motivfit.balance.ui.exercises.MuscularStrength;
 import com.motivfit.balance.view.SlidingTabLayout;
 
 /**

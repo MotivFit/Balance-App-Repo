@@ -2,7 +2,7 @@
  * Copyright (c) Andrew Quebe 2016 .
  */
 
-package com.motivfit.balance;
+package com.motivfit.balance.ui.preference;
 
 import android.content.Context;
 import android.content.SharedPreferences;

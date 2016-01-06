@@ -1,4 +1,4 @@
-package com.motivfit.balance.exercises;
+package com.motivfit.balance.ui.exercises;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,8 +14,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.motivfit.balance.Exercise;
-import com.motivfit.balance.ExerciseDetailActivity;
-import com.motivfit.balance.Preferences;
+import com.motivfit.balance.ui.activity.ExerciseDetailActivity;
+import com.motivfit.balance.ui.preference.Preferences;
 import com.motivfit.balance.R;
 
 import java.util.ArrayList;
