@@ -19,30 +19,30 @@ public class Exercise {
         this.id = id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public int getId() {
 
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public void setColor_id(int color_id) {
-        this.color_id = color_id;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public int getColor_id() {
 
         return color_id;
+    }
+
+    public void setColor_id(int color_id) {
+        this.color_id = color_id;
     }
 
 }

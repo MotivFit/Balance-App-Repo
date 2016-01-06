@@ -6,19 +6,21 @@ package com.motivfit.balance.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.motivfit.balance.R;
 
+import butterknife.Bind;
+
 /**
  * Created by Danish Shah on 29-Oct-15.
  */
-public class ExerciseDetailActivity extends AppCompatActivity {
+public class ExerciseDetailActivity extends BaseActivity {
+
+    @Bind(R.id.backdrop)
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,16 +30,7 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         Intent intent = getIntent();
         final String title = intent.getStringExtra("title");
 
-        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-        CollapsingToolbarLayout collapsingToolbar =
-                (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
-        collapsingToolbar.setTitle(title);
-
-        final ImageView imageView = (ImageView) findViewById(R.id.backdrop);
+        toolbar.setTitle(title);
         Glide.with(this).load(R.drawable.dumble).centerCrop().into(imageView);
 
     }

@@ -19,10 +19,18 @@ import com.motivfit.balance.ui.exercises.MuscularEndurance;
 import com.motivfit.balance.ui.exercises.MuscularStrength;
 import com.motivfit.balance.view.SlidingTabLayout;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 /**
  * Created by Home on 02-Nov-15.
  */
 public class ExerciseFragment extends Fragment {
+    @Bind(R.id.viewpager)
+    ViewPager viewPager;
+    @Bind(R.id.tabs)
+    SlidingTabLayout tabs;
+
 
     @Nullable
     @Override
@@ -37,10 +45,9 @@ public class ExerciseFragment extends Fragment {
         Adapter adapter = new Adapter(getActivity().getSupportFragmentManager());
         adapter.notifyDataSetChanged();
 
-        ViewPager viewPager = (ViewPager) v.findViewById(R.id.viewpager);
-        viewPager.setAdapter(adapter);
+        ButterKnife.bind(this, v);
 
-        SlidingTabLayout tabs = (SlidingTabLayout) v.findViewById(R.id.tabs);
+        viewPager.setAdapter(adapter);
         tabs.setViewPager(viewPager);
         tabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
             @Override
@@ -48,7 +55,6 @@ public class ExerciseFragment extends Fragment {
                 return getResources().getColor(R.color.colorAccent);
             }
         });
-
 
         return v;
     }

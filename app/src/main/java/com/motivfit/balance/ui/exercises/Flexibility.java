@@ -17,8 +17,7 @@ public class Flexibility extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup v = (ViewGroup) inflater.inflate(R.layout.fragment_flexibility, container, false);
 
-        return v;
+        return (ViewGroup) inflater.inflate(R.layout.fragment_flexibility, container, false);
     }
 }

@@ -14,19 +14,30 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.motivfit.balance.Exercise;
-import com.motivfit.balance.ui.activity.ExerciseDetailActivity;
-import com.motivfit.balance.ui.preference.Preferences;
 import com.motivfit.balance.R;
+import com.motivfit.balance.preference.Preferences;
+import com.motivfit.balance.ui.activity.ExerciseDetailActivity;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by Danish Shah on 02-Nov-15.
  */
 public class CardiovascularEndurance extends Fragment {
 
-    private List<Exercise> exe = new ArrayList<Exercise>();
+    @Bind(R.id.card_info_cardio)
+    CardView cInfo;
+    @Bind(R.id.gotit)
+    TextView dismiss;
+    @Bind(R.id.gridView)
+    GridView gridView;
+
+    private List<Exercise> exe = new ArrayList<>();
     private boolean first_run;
 
     @Nullable
@@ -36,22 +47,19 @@ public class CardiovascularEndurance extends Fragment {
 
         final Preferences preferences = new Preferences(getContext());
         first_run = preferences.isFirstRun();
-
-        final CardView cinfo = (CardView) v.findViewById(R.id.card_info_cardio);
-
-        TextView dismiss = (TextView) v.findViewById(R.id.gotit);
+        ButterKnife.bind(this, v);
         dismiss.setOnClickListener(new View.OnClickListener() {
             @Override
+            @OnClick(R.id.gotit)
             public void onClick(View v) {
-                cinfo.setVisibility(View.GONE);
+                cInfo.setVisibility(View.GONE);
                 first_run = preferences.firstRunOver();
             }
         });
 
-        if (first_run == false) {
-            v.removeView(cinfo);
+        if (!first_run) {
+            v.removeView(cInfo);
         }
-
         populateExerciseList();
         populateListView(v);
 
@@ -60,7 +68,6 @@ public class CardiovascularEndurance extends Fragment {
 
     private void populateListView(View v) {
         ArrayAdapter<Exercise> adapter = new ExerciseAdapter();
-        final GridView gridView = (GridView) v.findViewById(R.id.gridView);
         gridView.setAdapter(adapter);
 
     }
@@ -75,6 +82,11 @@ public class CardiovascularEndurance extends Fragment {
         exe.add(new Exercise("Step Machine", android.R.color.holo_blue_dark, R.drawable.ic_jog));
         exe.add(new Exercise("Skipping Rope", android.R.color.holo_orange_dark, R.drawable.ic_jog));
 
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
     }
 
     public class ExerciseAdapter extends ArrayAdapter<Exercise> {
@@ -112,10 +124,5 @@ public class CardiovascularEndurance extends Fragment {
 
             return convertView;
         }
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
     }
 }

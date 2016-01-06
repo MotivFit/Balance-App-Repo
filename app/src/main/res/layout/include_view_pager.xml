@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        app:theme="@style/AppTheme.AppBarOverlay"/>
+        app:theme="@style/AppTheme.AppBarOverlay" />
 
 
     <android.support.v4.view.ViewPager
