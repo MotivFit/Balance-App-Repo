@@ -3,9 +3,7 @@ package com.motivfit.balance.ui.exercises;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -16,19 +14,19 @@ import android.widget.TextView;
 import com.motivfit.balance.Exercise;
 import com.motivfit.balance.R;
 import com.motivfit.balance.ui.activity.ExerciseDetailActivity;
+import com.motivfit.balance.ui.fragment.BaseFragment;
 import com.motivfit.balance.util.preference.Preferences;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
  * Created by Danish Shah on 02-Nov-15.
  */
-public class CardiovascularEndurance extends Fragment {
+public class CardiovascularEndurance extends BaseFragment {
 
     @Bind(R.id.card_info_cardio)
     CardView cInfo;
@@ -40,30 +38,38 @@ public class CardiovascularEndurance extends Fragment {
     private List<Exercise> exe = new ArrayList<>();
     private boolean first_run;
 
+    @Override
+    public int layout() {
+        return R.layout.fragment_cardiovascular_endurance;
+    }
+
+
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        final ViewGroup v = (ViewGroup) inflater.inflate(R.layout.fragment_cardiovascular_endurance, container, false);
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
         final Preferences preferences = new Preferences(getContext());
         first_run = preferences.isFirstRun();
-        ButterKnife.bind(this, v);
-        dismiss.setOnClickListener(new View.OnClickListener() {
-            @Override
-            @OnClick(R.id.gotit)
-            public void onClick(View v) {
-                cInfo.setVisibility(View.GONE);
-                first_run = preferences.firstRunOver();
-            }
-        });
 
-        if (!first_run) {
-            v.removeView(cInfo);
+        //FIXME prefs are not saved
+
+        if (first_run) {
+            dismiss.setOnClickListener(new View.OnClickListener() {
+                @Override
+                @OnClick(R.id.gotit)
+                public void onClick(View v) {
+                    cInfo.setVisibility(View.GONE);
+                    first_run = preferences.firstRunOver();
+                }
+            });
+        } else {
+
+            cInfo.removeView(view);
         }
         populateExerciseList();
-        populateListView(v);
+        populateListView(view);
 
-        return v;
     }
 
     private void populateListView(View v) {

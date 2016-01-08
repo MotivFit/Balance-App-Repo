@@ -2,22 +2,25 @@ package com.motivfit.balance.ui.exercises;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import com.motivfit.balance.R;
+import com.motivfit.balance.ui.fragment.BaseFragment;
 
 /**
  * Created by Home on 02-Nov-15.
  */
-public class MuscularEndurance extends Fragment {
+public class MuscularEndurance extends BaseFragment {
+
+    @Override
+    public int layout() {
+        return R.layout.fragment_flexibility;
+    }
+
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-        return (ViewGroup) inflater.inflate(R.layout.fragment_muscular_endurance, container, false);
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
     }
 }
