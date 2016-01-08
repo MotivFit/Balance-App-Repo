@@ -15,8 +15,8 @@ import android.widget.TextView;
 
 import com.motivfit.balance.Exercise;
 import com.motivfit.balance.R;
-import com.motivfit.balance.preference.Preferences;
 import com.motivfit.balance.ui.activity.ExerciseDetailActivity;
+import com.motivfit.balance.ui.preference.Preferences;
 
 import java.util.ArrayList;
 import java.util.List;
