@@ -5,7 +5,7 @@
 package com.motivfit.balance;
 
 /**
- * Created by Home on 02-Nov-15.
+ * Created by Danish Shah on 02-Nov-15.
  */
 public class Exercise {
 

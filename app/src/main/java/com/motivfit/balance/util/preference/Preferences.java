@@ -8,7 +8,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 /**
- * Created by Home on 03-Nov-15.
+ * Created by Danish Shah on 03-Nov-15.
  */
 public class Preferences {
 
@@ -21,7 +21,7 @@ public class Preferences {
     }
 
     private SharedPreferences getSharedPreferences() {
-        return context.getSharedPreferences("uFit", Context.MODE_PRIVATE);
+        return context.getSharedPreferences("Balance", Context.MODE_PRIVATE);
     }
 
     public boolean isFirstRun() {

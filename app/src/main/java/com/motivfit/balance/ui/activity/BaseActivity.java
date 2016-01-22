@@ -1,5 +1,6 @@
 package com.motivfit.balance.ui.activity;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
@@ -41,5 +42,9 @@ public abstract class BaseActivity extends AppCompatActivity {
         if (toolbar == null)
             throw new NullPointerException("Its the time we build separate BaseActivity which does not have Toolbar in xml");
         setSupportActionBar(toolbar);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            toolbar.setElevation(R.dimen.toolbar_elevation);
+        }
     }
 }

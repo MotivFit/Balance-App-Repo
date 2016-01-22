@@ -3,6 +3,8 @@ package com.motivfit.balance.ui.exercises;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,7 +38,7 @@ public class CardiovascularEndurance extends BaseFragment {
     GridView gridView;
 
     private List<Exercise> exe = new ArrayList<>();
-    private boolean first_run;
+    private static boolean first_run;
 
     @Override
     public int layout() {
@@ -48,6 +50,11 @@ public class CardiovascularEndurance extends BaseFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        ActionBar ab = ((AppCompatActivity) getActivity()).getSupportActionBar();
+        if (ab != null) {
+            ab.setTitle("Cardiovascular Endurance");
+        }
 
         final Preferences preferences = new Preferences(getContext());
         first_run = preferences.isFirstRun();
@@ -64,7 +71,7 @@ public class CardiovascularEndurance extends BaseFragment {
                 }
             });
         } else {
-
+            cInfo.setVisibility(View.GONE);
             cInfo.removeView(view);
         }
         populateExerciseList();

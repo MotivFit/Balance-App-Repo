@@ -6,10 +6,7 @@
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home"
             android:title="Home" />
-        <item
-            android:id="@+id/nav_exercise"
-            android:icon="@drawable/ic_exercise"
-            android:title="Exercise" />
+
         <item
             android:id="@+id/nav_sports"
             android:icon="@drawable/ic_sports"
@@ -22,12 +19,39 @@
             android:id="@+id/nav_tips"
             android:icon="@drawable/ic_tips"
             android:title="Tips" />
+
+        <item   android:title="Exercise" >
+
+            <menu>
+
+                <group android:checkableBehavior="single">
+
+                    <item
+                        android:id="@+id/cardio_end"
+                        android:icon="@drawable/ic_donate"
+                        android:title="Cardiovascular Endurance"/>
+                    <item
+                        android:id="@+id/musc_end"
+                        android:icon="@drawable/ic_donate"
+                        android:title="Muscular Endurance"/>
+                    <item
+                        android:id="@+id/musc_str"
+                        android:icon="@drawable/ic_donate"
+                        android:title="Muscular Strength"/>
+                    <item
+                        android:id="@+id/flex"
+                        android:icon="@drawable/ic_donate"
+                        android:title="Flexibility"/>
+
+                </group>
+            </menu>
+        </item>
     </group>
 
     <item android:title="Miscellaneous">
 
         <menu>
-            <group android:checkableBehavior="single">
+            <group android:checkableBehavior="single" >
 
                 <item
                     android:id="@+id/nav_donate"

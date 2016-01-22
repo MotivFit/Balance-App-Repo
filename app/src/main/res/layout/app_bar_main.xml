@@ -9,8 +9,4 @@
 
     <include layout="@layout/layout_only_toolbar" />
 
-
-    <include layout="@layout/content_main" />
-
-
 </LinearLayout>

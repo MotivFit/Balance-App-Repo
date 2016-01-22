@@ -14,7 +14,7 @@ import com.motivfit.balance.ui.adapter.ExerciseTabAdapter;
 import butterknife.Bind;
 
 /**
- * Created by Home on 02-Nov-15.
+ * Created by Danish Shah on 02-Nov-15.
  */
 public class ExerciseFragment extends BaseFragment {
 

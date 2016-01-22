@@ -4,10 +4,10 @@
 
 package com.motivfit.balance.ui.activity;
 
-import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -15,7 +15,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.motivfit.balance.R;
-import com.motivfit.balance.ui.fragment.ExerciseFragment;
+import com.motivfit.balance.ui.exercises.CardiovascularEndurance;
+import com.motivfit.balance.ui.exercises.Flexibility;
+import com.motivfit.balance.ui.exercises.MuscularEndurance;
+import com.motivfit.balance.ui.exercises.MuscularStrength;
 import com.motivfit.balance.ui.fragment.HomeFragment;
 
 import butterknife.Bind;
@@ -38,10 +41,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
          * Setup Drawer Toggle of the Toolbar
          */
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            toolbar.setElevation(R.dimen.toolbar_elevation);
-        }
-
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
@@ -49,11 +48,12 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
         /**
          * Lets inflate the very first fragment
-         * Here , we are inflating the TabFragment as the first Fragment
+         * Here , we are inflating the HomeFragment as the first Fragment
          */
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.container_main, new HomeFragment())
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                 .commit();
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -99,13 +99,38 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
         if (id == R.id.nav_home) {
             manager.beginTransaction()
-                    .replace(R.id.container_main,
-                            new HomeFragment()).commit();
+                    .replace(R.id.container_main,new HomeFragment())
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .addToBackStack(null)
+                    .commit();
 
-        } else if (id == R.id.nav_exercise) {
+        } else if (id == R.id.cardio_end) {
             manager.beginTransaction()
-                    .replace(R.id.container_main,
-                            new ExerciseFragment()).commit();
+                    .replace(R.id.container_main, new CardiovascularEndurance())
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .addToBackStack(null)
+                    .commit();
+
+        } else if(id == R.id.musc_end) {
+            manager.beginTransaction()
+                    .replace(R.id.container_main, new MuscularEndurance())
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .addToBackStack(null)
+                    .commit();
+
+        } else if(id == R.id.musc_str) {
+            manager.beginTransaction()
+                    .replace(R.id.container_main, new MuscularStrength())
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .addToBackStack(null)
+                    .commit();
+
+        } else if(id == R.id.flex) {
+            manager.beginTransaction()
+                    .replace(R.id.container_main, new Flexibility())
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .addToBackStack(null)
+                    .commit();
 
         } else if (id == R.id.nav_sports) {
 
