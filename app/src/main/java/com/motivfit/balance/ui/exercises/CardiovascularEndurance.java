@@ -1,6 +1,7 @@
 package com.motivfit.balance.ui.exercises;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
@@ -36,6 +37,10 @@ public class CardiovascularEndurance extends BaseFragment {
     TextView dismiss;
     @Bind(R.id.gridView)
     GridView gridView;
+    @Bind(R.id.info_title)
+    TextView info_title;
+    @Bind(R.id.info_desc)
+    TextView info_desc;
 
     private List<Exercise> exe = new ArrayList<>();
     private static boolean first_run;
@@ -55,6 +60,12 @@ public class CardiovascularEndurance extends BaseFragment {
         if (ab != null) {
             ab.setTitle("Cardiovascular Endurance");
         }
+
+        Typeface roboto_l = Typeface.createFromAsset(getActivity().getAssets(),"Roboto-Light.ttf");
+        Typeface roboto_it = Typeface.createFromAsset(getActivity().getAssets(),"Roboto-Italic.ttf");
+
+        info_title.setTypeface(roboto_l);
+        info_desc.setTypeface(roboto_it);
 
         final Preferences preferences = new Preferences(getContext());
         first_run = preferences.isFirstRun();
@@ -86,14 +97,14 @@ public class CardiovascularEndurance extends BaseFragment {
     }
 
     public void populateExerciseList() {
-        exe.add(new Exercise("Trisep Dips", android.R.color.holo_blue_light, R.drawable.ic_jog));
-        exe.add(new Exercise("Treadmill", android.R.color.holo_red_light, R.drawable.ic_jog));
-        exe.add(new Exercise("Rowing Machine", android.R.color.holo_purple, R.drawable.ic_jog));
-        exe.add(new Exercise("Pushups", android.R.color.holo_green_light, R.drawable.ic_jog));
-        exe.add(new Exercise("Cardio Bike", android.R.color.holo_orange_light, R.drawable.ic_jog));
-        exe.add(new Exercise("Chin-ups", android.R.color.holo_red_dark, R.drawable.ic_jog));
-        exe.add(new Exercise("Step Machine", android.R.color.holo_blue_dark, R.drawable.ic_jog));
-        exe.add(new Exercise("Skipping Rope", android.R.color.holo_orange_dark, R.drawable.ic_jog));
+        exe.add(new Exercise("Trisep Dips", R.color.md_amber_500, R.drawable.ic_jog));
+        exe.add(new Exercise("Treadmill", R.color.md_blue_500, R.drawable.ic_jog));
+        exe.add(new Exercise("Rowing Machine", R.color.md_cyan_500, R.drawable.ic_jog));
+        exe.add(new Exercise("Pushups", R.color.md_deep_orange_500, R.drawable.ic_jog));
+        exe.add(new Exercise("Cardio Bike", R.color.md_deep_purple_500, R.drawable.ic_jog));
+        exe.add(new Exercise("Chin-ups", R.color.md_green_500, R.drawable.ic_jog));
+        exe.add(new Exercise("Step Machine", R.color.md_indigo_500, R.drawable.ic_jog));
+        exe.add(new Exercise("Skipping Rope", R.color.md_red_500, R.drawable.ic_jog));
 
     }
 

@@ -1,12 +1,14 @@
 package com.motivfit.balance.ui.fragment;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.widget.TextView;
 
 import com.motivfit.balance.R;
 import com.motivfit.balance.ui.activity.FitnessMonitor;
@@ -20,6 +22,14 @@ public class HomeFragment extends BaseFragment {
 
     @Bind(R.id.heart_rate)
     CardView hrate;
+
+    @Bind(R.id.welcome_text)
+    TextView welcome_text;
+
+    @Bind(R.id.welcome_desc)
+    TextView welcome_desc;
+    @Bind(R.id.heart_rate_percent)
+    TextView heart_rate;
 
     @Override
     public int layout() {
@@ -36,6 +46,11 @@ public class HomeFragment extends BaseFragment {
         if (ab != null) {
             ab.setTitle("Home");
         }
+
+        Typeface roboto = Typeface.createFromAsset(getActivity().getAssets(),"Roboto-Light.ttf");
+        welcome_text.setTypeface(roboto);
+        welcome_desc.setTypeface(roboto);
+        heart_rate.setTypeface(roboto);
 
         /**
          *   A special card which monitors the overall body fitness.

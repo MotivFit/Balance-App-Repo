@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#4DD0E1</color>
-    <color name="colorPrimaryDark">#00BCD4</color>
-    <color name="colorAccent">#FFFF00</color>
+    <color name="colorPrimary">#ff9100</color>
+    <color name="colorPrimaryDark">#ff6d00</color>
+    <color name="colorAccent">#ffc400</color>
     <color name="semitransparent_white">#80ffffff</color>
     <color name="info_card">#607D8B</color>
+    <color name="md_red_500">#f44336</color>
+    <color name="md_pink_500">#e91e63</color>
+    <color name="md_deep_purple_500">#9c27b0</color>
+    <color name="md_purple_500">#673ab7</color>
+    <color name="md_indigo_500">#3f51b5</color>
+    <color name="md_blue_500">#2196f3</color>
+    <color name="md_light_blue_500">#03a9f4</color>
+    <color name="md_cyan_500">#00bcd4</color>
+    <color name="md_teal_500">#009688</color>
+    <color name="md_green_500">#4caf50</color>
+    <color name="md_light_green_500">#8bc34a</color>
+    <color name="md_lime_500">#cddc39</color>
+    <color name="md_yellow_500">#ffeb3b</color>
+    <color name="md_amber_500">#ffc107</color>
+    <color name="md_orange_500">#ff9800</color>
+    <color name="md_deep_orange_500">#ff5722</color>
+
 </resources>

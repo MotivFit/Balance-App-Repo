@@ -12,7 +12,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="151dp"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@mipmap/ic_concept_balance_splash" />
 
     <TextView
         android:layout_width="wrap_content"

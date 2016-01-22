@@ -13,6 +13,7 @@ import android.content.SharedPreferences;
 public class Preferences {
 
     private static final String FIRSTRUN = "firstrun";
+    private static boolean val = true;
 
     private final Context context;
 
@@ -25,12 +26,12 @@ public class Preferences {
     }
 
     public boolean isFirstRun() {
-        return getSharedPreferences().getBoolean(FIRSTRUN, true);
+        return getSharedPreferences().getBoolean(FIRSTRUN, val);
     }
 
     public boolean firstRunOver() {
-        getSharedPreferences().edit().putBoolean(FIRSTRUN, false);
-        return getSharedPreferences().getBoolean(FIRSTRUN, false);
+        getSharedPreferences().edit().putBoolean(FIRSTRUN, val=false);
+        return getSharedPreferences().getBoolean(FIRSTRUN, val);
     }
 
 }

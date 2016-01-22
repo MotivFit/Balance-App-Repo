@@ -56,6 +56,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                 .commit();
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setCheckedItem(R.id.nav_home);
 
     }
 
@@ -99,37 +100,36 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
         if (id == R.id.nav_home) {
             manager.beginTransaction()
-                    .replace(R.id.container_main,new HomeFragment())
+                    .replace(R.id.container_main, new HomeFragment())
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .addToBackStack(null)
                     .commit();
 
         } else if (id == R.id.cardio_end) {
             manager.beginTransaction()
                     .replace(R.id.container_main, new CardiovascularEndurance())
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .addToBackStack(null)
+                    .addToBackStack("HomeFragment")
                     .commit();
 
         } else if(id == R.id.musc_end) {
             manager.beginTransaction()
                     .replace(R.id.container_main, new MuscularEndurance())
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .addToBackStack(null)
+                    .addToBackStack("HomeFragment")
                     .commit();
 
         } else if(id == R.id.musc_str) {
             manager.beginTransaction()
                     .replace(R.id.container_main, new MuscularStrength())
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .addToBackStack(null)
+                    .addToBackStack("HomeFragment")
                     .commit();
 
         } else if(id == R.id.flex) {
             manager.beginTransaction()
                     .replace(R.id.container_main, new Flexibility())
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .addToBackStack(null)
+                    .addToBackStack("HomeFragment")
                     .commit();
 
         } else if (id == R.id.nav_sports) {

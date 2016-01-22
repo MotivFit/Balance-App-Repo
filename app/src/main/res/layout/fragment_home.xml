@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:text="Welcome"
                 android:textColor="@android:color/primary_text_light"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:layout_marginBottom="4dp" />
 
             <TextView
@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:text="Something about the app and blah blah blah...\nJust writing these lines to consume some space"
                 android:textColor="@android:color/secondary_text_light"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:layout_marginTop="4dp" />
 
         </LinearLayout>
@@ -58,7 +58,7 @@
             app:cardCornerRadius="50dp"
             app:contentPadding="4dp"
             app:cardElevation="4dp"
-            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardBackgroundColor="@color/colorAccent"
             android:layout_gravity="center_vertical">
 
             <TextView
@@ -94,7 +94,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Muscular Fitness: 67%"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textColor="@android:color/primary_text_light"
                     android:layout_marginBottom="4dp" />
 
@@ -102,7 +102,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Cardio Fitness: 21%"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textColor="@android:color/primary_text_light"
                     android:layout_marginBottom="4dp" />
 
@@ -110,7 +110,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Some Fitness: 38%"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textColor="@android:color/primary_text_light"/>
 
             </LinearLayout>

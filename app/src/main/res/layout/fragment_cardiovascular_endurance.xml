@@ -24,6 +24,7 @@
             android:layout_marginBottom="-16dp">
 
             <TextView
+                android:id="@+id/info_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Cardiovascular Endurance."
@@ -31,6 +32,7 @@
                 android:textColor="@android:color/primary_text_dark" />
 
             <TextView
+                android:id="@+id/info_desc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
