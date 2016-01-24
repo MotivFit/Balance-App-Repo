@@ -108,28 +108,28 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             manager.beginTransaction()
                     .replace(R.id.container_main, new CardiovascularEndurance())
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .addToBackStack("HomeFragment")
+                    .addToBackStack(null)
                     .commit();
 
         } else if(id == R.id.musc_end) {
             manager.beginTransaction()
                     .replace(R.id.container_main, new MuscularEndurance())
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .addToBackStack("HomeFragment")
+                    .addToBackStack(null)
                     .commit();
 
         } else if(id == R.id.musc_str) {
             manager.beginTransaction()
                     .replace(R.id.container_main, new MuscularStrength())
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .addToBackStack("HomeFragment")
+                    .addToBackStack(null)
                     .commit();
 
         } else if(id == R.id.flex) {
             manager.beginTransaction()
                     .replace(R.id.container_main, new Flexibility())
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .addToBackStack("HomeFragment")
+                    .addToBackStack(null)
                     .commit();
 
         } else if (id == R.id.nav_sports) {
